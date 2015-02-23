@@ -1,0 +1,35 @@
+{
+  "name": "restier",
+  "version": "0.0.1",
+  "description": "Interact with REST resources with a simple API",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "testem && webpack --watch ./tests/setup.js tests/build-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agonbina/RESTier.git"
+  },
+  "keywords": [
+    "request",
+    "http",
+    "browser"
+  ],
+  "author": "Agon Bina <agon_bina@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agonbina/RESTier/issues"
+  },
+  "homepage": "https://github.com/agonbina/RESTier",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "domready": "^1.0.7",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0",
+    "testem": "^0.6.38"
+  }
+}

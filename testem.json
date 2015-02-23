@@ -1,0 +1,12 @@
+{
+    "framework": "mocha+chai",
+    "serve_files": [ "tests/build-test.js" ],
+    "src_files": [
+        "tests/setup.js",
+        "tests/**/*.test.js"
+    ],
+    "launchers": { },
+    "before_tests": "webpack ./tests/setup.js tests/build-test.js",
+    "on_exit": "rm tests/build-test.js",
+    "launch_in_dev": [ "chrome" ]
+}
