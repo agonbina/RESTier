@@ -1,13 +1,11 @@
 
-describe('hello', function() {
+describe('Model', function() {
 
-	it('should return hello', function() {
-		var output = 'hello'
-		expect(output).to.equal('hello')
-	})
+	it('get and set should proxy to the datastore instance', function () {
+		window.user = new Model()
 
-	it('should be even', function () {
-		expect(2 === 2).to.be.equal(true)
+		expect(user.set('name', 'Agon').get('name')).to.equal('Agon')
+		expect(user.get('test')).to.be.undefined
 	})
 
 })

@@ -50,6 +50,8 @@ room.get('name') // 'Agon'
 var tvSpecs = store.resource('rooms').id(1)
                       .resource('equipment').id('tv')
                       .resource('specs') // rooms/1/equipment/tv/specs
+
+// NOT SO SURE: var tvSpecs = store.rooms().id(1).equipment().id('tv').specs()
                       
 // tvSpecs = room.resource('equipment').id('tv').resource('specs') is equivalent
 
@@ -74,32 +76,24 @@ brands.fetch().then(function(list) {
 
 ```js
 Model.prototype = {
-  save: 
-  retrieve:
+  save:
+  load:
+  reload: // syntactic sugar, proxies call to .retrieve
   delete:
+
   set:
   get:
+  toJSON:
+
   resource:
 }
 
 Collection.prototype = {
   create:
   fetch:
+  
   id:
+
   resource:
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-

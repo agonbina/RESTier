@@ -6,12 +6,16 @@ chai.use(require('sinon-chai'));
  * Load dependencies globally
  */
 
-model = require('../src/model')
+datastore = require('datastore')
+Store = require('../src/store')
+Model = require('../src/model')
+Resource = require('../src/resource')
 
 
 /**
  * Load tests
  */
 
+require('./store.test')
 require('./model.test')
-//require('./collection.test')
+require('./resource.test')
